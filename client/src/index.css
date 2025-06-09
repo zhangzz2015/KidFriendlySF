@@ -60,9 +60,13 @@
 
 /* Leaflet custom styles */
 .leaflet-container {
-  height: 100%;
-  width: 100%;
+  height: 100% !important;
+  width: 100% !important;
   z-index: 1;
+}
+
+.leaflet-control-container .leaflet-routing-container-hide {
+  display: none;
 }
 
 .leaflet-popup-content-wrapper {

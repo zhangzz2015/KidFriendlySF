@@ -156,16 +156,11 @@ export default function MapPage() {
           )}
 
           {/* Map Component */}
-          <div className="p-4">
-            <h3 className="mb-4 text-lg font-semibold">Simple Map Test:</h3>
-            <SimpleMap />
-            <h3 className="mt-8 mb-4 text-lg font-semibold">React Leaflet Map:</h3>
-            <MapView
-              locations={locations}
-              activeFilters={activeFilters}
-              onCenterMapRef={setCenterMapFunction}
-            />
-          </div>
+          <MapView
+            locations={locations}
+            activeFilters={activeFilters}
+            onCenterMapRef={setCenterMapFunction}
+          />
         </div>
       </div>
     </div>
