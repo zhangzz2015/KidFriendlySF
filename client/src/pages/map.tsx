@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { getLocations, refreshLocations } from '../lib/overpassApi';
 import MapView from '../components/MapView';
+import SimpleMap from '../components/SimpleMap';
 import Sidebar from '../components/Sidebar';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, AlertTriangle, X } from 'lucide-react';
@@ -155,11 +156,16 @@ export default function MapPage() {
           )}
 
           {/* Map Component */}
-          <MapView
-            locations={locations}
-            activeFilters={activeFilters}
-            onCenterMapRef={setCenterMapFunction}
-          />
+          <div className="p-4">
+            <h3 className="mb-4 text-lg font-semibold">Simple Map Test:</h3>
+            <SimpleMap />
+            <h3 className="mt-8 mb-4 text-lg font-semibold">React Leaflet Map:</h3>
+            <MapView
+              locations={locations}
+              activeFilters={activeFilters}
+              onCenterMapRef={setCenterMapFunction}
+            />
+          </div>
         </div>
       </div>
     </div>

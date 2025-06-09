@@ -42,12 +42,11 @@ export default function MapView({ locations, activeFilters, onCenterMapRef }: Ma
   );
 
   return (
-    <div className="flex-1 relative">
+    <div className="flex-1 relative" style={{ height: '400px', minHeight: '400px' }}>
       <MapContainer
         center={[37.7749, -122.4194]}
         zoom={12}
-        className="h-full w-full"
-        ref={mapRef}
+        style={{ height: '100%', width: '100%' }}
         maxBounds={[
           [37.70, -122.55], // Southwest
           [37.85, -122.30]  // Northeast
